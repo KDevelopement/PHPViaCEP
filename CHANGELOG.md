@@ -25,4 +25,4 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Search addresses using city, state and street name.
 
 ### Removed
-- Method `find` (deprecated) removed.
+- Method `find` (deprecated) removed. 
