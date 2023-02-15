@@ -28,12 +28,16 @@ class VCRun
      * Find address by zip code (CEP).
      *
      * @param  string $zipCode
+     * @param  string|bool $callback
      *
      * @return \KSeven\ViaCEP\Address
      */
-    public function findByZipCode($zipCode)
+    public function findByZipCode($zipCode, $callback = FALSE)
     {
-        $url = sprintf('https://viacep.com.br/ws/%s/json', $zipCode);
+        $url = sprintf(
+            'https://viacep.com.br/ws/%s/json' . ($callback ? "/?callback=" . $callback : NULL), 
+            $zipCode
+        );
 
         $response = $this->http->request('GET', $url);
 
@@ -52,13 +56,14 @@ class VCRun
      * @param  string $state
      * @param  string $city
      * @param  string $street
+     * @param  string|bool $callback
      *
      * @return \KSeven\ViaCEP\Address[]
      */
-    public function findByStreetName($state, $city, $street)
+    public function findByStreetName($state, $city, $street, $callback = FALSE)
     {
         $url = sprintf(
-            'https://viacep.com.br/ws/%s/%s/%s/json',
+            'https://viacep.com.br/ws/%s/%s/%s/json' . ($callback ? "/?callback=" . $callback : NULL),
             rawurlencode($state),
             rawurlencode($city),
             rawurlencode($street)
