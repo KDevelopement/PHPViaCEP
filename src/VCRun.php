@@ -56,14 +56,13 @@ class VCRun
      * @param  string $state
      * @param  string $city
      * @param  string $street
-     * @param  string|bool $callback
      *
      * @return \KSeven\ViaCEP\Address[]
      */
-    public function findByStreetName($state, $city, $street, $callback = FALSE)
+    public function findByStreetName($state, $city, $street)
     {
         $url = sprintf(
-            'https://viacep.com.br/ws/%s/%s/%s/json' . ($callback ? "/?callback=" . $callback : NULL),
+            'https://viacep.com.br/ws/%s/%s/%s/json',
             rawurlencode($state),
             rawurlencode($city),
             rawurlencode($street)
