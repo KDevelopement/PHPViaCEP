@@ -104,4 +104,14 @@ class Address
     {
         return get_object_vars($this);
     }
+
+    /**
+     * with callback.
+     *
+     * @return mixed
+     */
+    public function withCallback()
+    {
+        return $this;
+    }
 }
