@@ -18,7 +18,7 @@ $ composer require kseven/phpviacep
 
 ## Usage
 
-### findByZipCode
+### findByZipCode (No Callback)
 
 Find address by zip code.
 
@@ -57,6 +57,35 @@ Should return something like this:
     "state": "SP",
     "ibge": "3550308"
 }
+*/
+```
+
+### findByZipCode (With Callback)
+
+Find address by zip code, with callback.
+
+```php
+use KSeven\ViaCEP\VCRun AS ViaCEP;
+
+$ViaCEP = new ViaCEP;
+
+$Address = $ViaCEP->findByZipCode('01001-000', 'callback_name')->withCallback();
+
+/*
+Should return something like this:
+
+callback_name({
+    "cep": "01001-000",
+    "logradouro": "Praça da Sé",
+    "complemento": "lado ímpar",
+    "bairro": "Sé",
+    "localidade": "São Paulo",
+    "uf": "SP",
+    "ibge": "3550308",
+    "gia": "1004",
+    "ddd": "11",
+    "siafi": "7107"
+});
 */
 ```
 
@@ -100,12 +129,6 @@ Should return something like this:
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
