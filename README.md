@@ -1,10 +1,12 @@
 # ViaCEP PHP SDK
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![CircleCI][icon-circleci]][link-circleci]
-[![Codecov][icon-codecov]][link-codecov]
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
+[![Coverage Status](https://coveralls.io/repos/github/KS7ven/PHPViaCEP/badge.svg?branch=master)](https://coveralls.io/github/KS7ven/PHPViaCEP?branch=master)
+[![](https://github.com/KS7ven/PHPViaCEP/workflows/PHPUnit/badge.svg)](https://github.com/KS7ven/PHPViaCEP/actions/workflows/phpunit.yml)
+[![](https://github.com/KS7ven/PHPViaCEP/workflows/PHPStan/badge.svg)](https://github.com/KS7ven/PHPViaCEP/actions/workflows/phpstan.yml)
+[![](https://github.com/KS7ven/PHPViaCEP/workflows/Deptrac/badge.svg)](https://github.com/KS7ven/PHPViaCEP/actions/workflows/deptrac.yml)
 
 Search for addresses by zip code using the [ViaCEP](https://viacep.com.br) REST API.
 
