@@ -117,7 +117,7 @@ If you discover any security related issues, please email lucas.pires.mattos@gma
 
 ## Credits
 
-- [Lucas Pires][link-author]
+- [K'Seven][link-author]
 - [All Contributors][link-contributors]
 
 ## License
