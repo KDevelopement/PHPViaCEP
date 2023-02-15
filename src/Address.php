@@ -56,7 +56,7 @@ class Address
     /**
      * Creates a new address instance.
      *
-     * @param array $attributes
+     * @param array $attributes 
      */
     public function __construct(array $attributes = [])
     {
