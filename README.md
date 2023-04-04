@@ -8,9 +8,9 @@
 [![](https://github.com/KS7ven/PHPViaCEP/workflows/PHPStan/badge.svg)](https://github.com/KS7ven/PHPViaCEP/actions/workflows/phpstan.yml)
 [![](https://github.com/KS7ven/PHPViaCEP/workflows/Deptrac/badge.svg)](https://github.com/KS7ven/PHPViaCEP/actions/workflows/deptrac.yml)
 
-Search for addresses by zip code using the [ViaCEP](https://viacep.com.br) REST API.
+Pesquise endereços por CEP usando a API REST [ViaCEP](https://viacep.com.br).
 
-## Install
+## Instalar
 
 Via Composer
 
@@ -18,11 +18,11 @@ Via Composer
 $ composer require kseven/phpviacep
 ```
 
-## Usage
+## Uso
 
-### findByZipCode (No Callback)
+### findByZipCode (Sem retorno de chamada)
 
-Find address by zip code.
+Encontre o endereço pelo código postal.
 
 ```php
 use KSeven\ViaCEP\VCRun AS ViaCEP;
@@ -32,7 +32,7 @@ $ViaCEP = new ViaCEP;
 $Address = $ViaCEP->findByZipCode('01001-000')->toArray();
 
 /*
-Should return something like this:
+Deve retornar algo assim:
 
 [
     'zipCode' => '01001-000',
@@ -48,7 +48,7 @@ Should return something like this:
 $Address = $ViaCEP->findByZipCode('01001-000')->toJson();
 
 /*
-Should return something like this:
+Deve retornar algo assim:
 
 {
     "zipCode": "01001-000",
@@ -62,9 +62,9 @@ Should return something like this:
 */
 ```
 
-### findByZipCode (With Callback)
+### findByZipCode (Com retorno de chamada)
 
-Find address by zip code, with callback.
+Encontre o endereço por código postal, com retorno de chamada.
 
 ```php
 use KSeven\ViaCEP\VCRun AS ViaCEP;
@@ -74,7 +74,7 @@ $ViaCEP = new ViaCEP;
 $Address = $ViaCEP->findByZipCode('01001-000', 'callback_name')->withCallback();
 
 /*
-Should return something like this:
+Deve retornar algo assim:
 
 callback_name({
     "cep": "01001-000",
@@ -93,7 +93,7 @@ callback_name({
 
 ### findByStreetName
 
-Search for addresses using state, city and a street name.
+Pesquise endereços usando estado, cidade e nome de uma rua.
 
 ```php
 use KSeven\ViaCEP\VCRun AS ViaCEP;
@@ -103,7 +103,7 @@ $ViaCEP = new ViaCEP;
 $Addresses = $ViaCEP->findByStreetName('SP', 'São Paulo', 'Gomes de Carvalho');
 
 /*
-Should return something like this:
+Deve retornar algo assim:
 
 [
     [
@@ -128,26 +128,26 @@ Should return something like this:
 */
 ```
 
-## Change log
+## Registo de alterações
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Consulte [CHANGELOG](CHANGELOG.md) para obter mais informações sobre o que mudou recentemente.
 
-## Contributing
+## Contribuindos
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
+Consulte [CONTRIBUINDO](CONTRIBUINDO.md) e [CONDUTA](CONDUTA.md) para obter detalhes.
 
-## Security
+## Segurança
 
-If you discover any security related issues, please email contato@kseven.dev.br instead of using the issue tracker.
+Se você descobrir algum problema relacionado à segurança, envie um e-mail para contato@kseven.dev.br em vez de usar o rastreador de problemas.
 
 ## Credits
 
 - [K'Seven][link-author]
 - [All Contributors][link-contributors]
 
-## License
+## Licença
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+A licença MIT (MIT). Consulte [Arquivo de licença](LICENSE.md) para obter mais informações..
 
 [ico-version]: https://img.shields.io/packagist/v/kseven/phpviacep.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
